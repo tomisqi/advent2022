@@ -32,8 +32,8 @@ def GetItemSum(inputfile):
     totalSum = 0
     for line in inputfile:
         size = len(line)
-        hsize = int(size/2)
-        compartments = (line[0:hsize], line[hsize:size-1])
+        halfsize = int(size/2)
+        compartments = (line[0:halfsize], line[halfsize:size-1])
 #        print("%d..%s" % (len(line), line))
         print ("(%s, %s)" % (compartments[0], compartments[1]))
         totalSum += FindDuplicatesPriorities(compartments[0], compartments[1])
